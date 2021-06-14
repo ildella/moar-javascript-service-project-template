@@ -26,6 +26,7 @@
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-security": "1.4.0",
     "eslint-plugin-sonarjs": "0.8.0-125",
-    "jest": "27.0.4"
+    "jest": "27.0.4",
+    "node-notifier": "10.0.0"
   }
 }
