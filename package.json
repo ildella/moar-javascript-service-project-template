@@ -27,6 +27,7 @@
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-security": "1.4.0",
     "eslint-plugin-sonarjs": "0.8.0-125",
+    "highland": "2.13.5",
     "jest": "27.0.4",
     "jest-dynalite": "3.3.1",
     "node-notifier": "10.0.0"
