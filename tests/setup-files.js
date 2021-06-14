@@ -7,3 +7,7 @@ const dynaliteOptions = {
 AWS.config.update({
   ...dynaliteOptions,
 })
+
+// Disable this 2 lines to use per-file DynamoDB start/stop
+// const {setup} = require('jest-dynalite')
+// setup(__dirname)
