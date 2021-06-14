@@ -4,6 +4,9 @@
   "repository": "git@github.com:ildella/ildella-nodejs-template.git",
   "author": "Daniele Dellafiore",
   "license": "MIT",
+  "engines": {
+    "node": ">=12.10"
+  },
   "scripts": {
     "cpd": "scripts/cpd",
     "lint": "eslint . --max-warnings 0",
@@ -15,8 +18,8 @@
     "ci.test": "circleci local execute --job test",
     "release.patch": "yarn version --patch && git push && git push --tags"
   },
-
   "devDependencies": {
+    "aws-sdk": "2.927.0",
     "eslint": "7.28.0",
     "eslint-config-node-opinionated": "0.4.0",
     "eslint-plugin-jest": "24.3.6",

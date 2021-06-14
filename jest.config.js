@@ -1,16 +1,16 @@
 // Documentation: https://jestjs.io/docs/en/configuration.html
 
 module.exports = {
-    // projects: ['<rootDir>/__tests__/*', '<rootDir>/__e2e__/*'],
+  // projects: ['<rootDir>/tests/*', '<rootDir>/__e2e__/*'],
   // preset: 'jest-dynalite',
   testEnvironment: 'node',
   testMatch: ['**/tests/**/*.test.js'],
   testPathIgnorePatterns: [
     '/node_modules',
   ],
-  globalSetup: '<rootDir>/__tests__/setupTests.js',
-  setupFiles: ['./__tests__/setupBeforeEnv'],
-  setupFilesAfterEnv: ['./tests/after-environment.js'],
+  globalSetup: '<rootDir>/tests/global-setup.js',
+  setupFiles: ['./tests/setup-files'],
+  setupFilesAfterEnv: ['./tests/setup-files-after-environment.js'],
   collectCoverage: false,
   collectCoverageFrom: [
     '**/src/**/*.{js,jsx}',
