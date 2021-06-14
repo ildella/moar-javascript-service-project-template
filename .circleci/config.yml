@@ -8,37 +8,75 @@ orbs:
   # See the orb documentation here: https://circleci.com/developer/orbs/orb/circleci/node
   node: circleci/node@4.1
 
-
 jobs:
-  # Below is the definition of your job to build and test your app, you can rename and customize it as you want.
-  build-and-test:  
+  lint:
+    docker:
+      - image: cimg/node:14.17
+    # executor:
+    #   name: node/default
+    #   tag: '14.17'
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn
+      - run:
+          command: yarn lint
+  audit:
+    docker:
+      - image: cimg/node:14.17
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn
+      - run:
+          command: yarn audit --groups dependencies
+  unit-tests:  
     # These next lines define a Docker executor: https://circleci.com/docs/2.0/executor-types/
     # You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # A list of available CircleCI Docker Convenience Images are available here: https://circleci.com/developer/images/image/cimg/node
     docker:
-      - image: cimg/node:15.1
-    # Then run your tests!
-    # CircleCI will report the results back to your VCS provider.
+      - image: cimg/node:14.17
     steps:
       # Checkout the code as the first step.
       - checkout
-      # Next, the node orb's install-packages step will install the dependencies from a package.json.
-      # The orb install-packages step will also automatically cache them for faster future runs.
-      - node/install-packages
-      # If you are using yarn instead npm, remove the line above and uncomment the two lines below.
-      # - node/install-packages:
-      #     pkg-manager: yarn 
+      - node/install-packages:
+          pkg-manager: yarn 
       - run:
           name: Run tests
-          command: npm test
+          command: yarn test
 
 workflows:
   # Below is the definition of your workflow.
   # Inside the workflow, you provide the jobs you want to run, e.g this workflow runs the build-and-test job above.
   # CircleCI will run this workflow on every commit.
   # For more details on extending your workflow, see the configuration docs: https://circleci.com/docs/2.0/configuration-reference/#workflows
-  sample: 
+  check-and-build: 
     jobs:
-      - build-and-test
-      # For running simple node tests, you could optionally use the node/test job from the orb to replicate and replace the job above in fewer lines.
-      # - node/test
+      - lint
+      - audit
+      - unit-tests
+      - deploy-dev:
+        requires:
+          - unit-tests
+          - lint
+          - audit
+          # - e2e-test
+          # - performance-test
+        filters:
+          branches:
+            only: master
+
+
+## Advanced workflow - NodeJS version matrix
+
+# workflows:
+#   sample:
+#     jobs:
+#       - node/test:
+#           matrix:
+#             parameters:
+#               version: ['15.1', 'lts', '12.21']
+#           # For more information about matrix testing see the detailed blog post:
+#           # https://circleci.com/blog/circleci-matrix-jobs/
+#           # or the configuration reference:
+#           # https://circleci.com/docs/2.0/configuration-reference/?section=reference#matrix-requires-version-21
