@@ -1,0 +1,28 @@
+{
+  "name": "ildella-nodejs-template",
+  "version": "0.1.0",
+  "repository": "git@github.com:ildella/ildella-nodejs-template.git",
+  "author": "Daniele Dellafiore",
+  "license": "MIT",
+  "scripts": {
+    "cpd": "scripts/cpd",
+    "lint": "eslint . --max-warnings 0",
+    "lint.fix": "yarn lint --fix",
+    "test": "jest",
+    "test.ci": "jest --ci --runInBand",
+    "test.e2e": "jest --config jest.config.e2e.js --runInBand",
+    "ci.validate": "circleci config validate",
+    "ci.test": "circleci local execute --job test",
+    "release.patch": "yarn version --patch && git push && git push --tags"
+  },
+
+  "devDependencies": {
+    "eslint": "7.28.0",
+    "eslint-config-node-opinionated": "0.4.0",
+    "eslint-plugin-jest": "24.3.6",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-security": "1.4.0",
+    "eslint-plugin-sonarjs": "0.8.0-125",
+    "jest": "27.0.4"
+  }
+}
