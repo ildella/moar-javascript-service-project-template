@@ -34,8 +34,6 @@ test('async with a pipeline', done => {
     })
 })
 
-extend(__, wrapPromise, 'wrapPromise')
-
 test('extend highland', () => {
   expect(Object.prototype.hasOwnProperty.call(__, 'flatMap')).toEqual(true)
   expect(Object.prototype.hasOwnProperty.call(__, 'something')).toEqual(false)
