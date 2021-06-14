@@ -55,16 +55,16 @@ workflows:
       - lint
       - audit
       - unit-tests
-      - deploy-dev:
-        requires:
-          - unit-tests
-          - lint
-          - audit
-          # - e2e-test
-          # - performance-test
-        filters:
-          branches:
-            only: master
+      # - deploy-dev:
+      #   requires:
+      #     - unit-tests
+      #     - lint
+      #     - audit
+      #     # - e2e-test
+      #     # - performance-test
+      #   filters:
+      #     branches:
+      #       only: master
 
 
 ## Advanced workflow - NodeJS version matrix
