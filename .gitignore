@@ -13,3 +13,5 @@ dist/
 
 .serverless
 .terraform
+
+.kinesis-db
