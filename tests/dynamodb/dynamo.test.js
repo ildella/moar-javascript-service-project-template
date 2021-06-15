@@ -20,7 +20,7 @@ const path = require('path')
 test('check config', () => {
   expect(process.env.JEST_DYNALITE_CONFIG_DIRECTORY).toContain('/ildella-nodejs-template')
   const resolved = path.resolve(process.cwd(), 'jest-dynalite-config.js')
-  expect(resolved).toContain('/ildella-nodejs-template/jest-dynalite-config.js')
+  expect(resolved).toContain('/jest-dynalite-config.js')
 })
 
 test('check config - wrong', () => {
