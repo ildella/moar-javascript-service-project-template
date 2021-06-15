@@ -1,3 +1,6 @@
+const {setup} = require('jest-dynalite')
+setup(process.cwd())
+
 const AWS = require('aws-sdk')
 const dynaliteOptions = {
   dynamodb: {endpoint: process.env.MOCK_DYNAMODB_ENDPOINT},
@@ -7,7 +10,3 @@ const dynaliteOptions = {
 AWS.config.update({
   ...dynaliteOptions,
 })
-
-// Disable this 2 lines to use per-file DynamoDB start/stop
-// const {setup} = require('jest-dynalite')
-// setup(__dirname)
