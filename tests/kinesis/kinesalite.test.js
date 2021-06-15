@@ -71,7 +71,7 @@ test('write', async () => {
   console.log(response)
 })
 
-test.skip('read', async () => {
+test('read', async () => {
   const {ShardIterator} = await kinesis().getShardIterator({
     StreamName,
     ShardId: 'shardId-000000000000',
