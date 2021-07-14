@@ -1,27 +1,14 @@
-// Documentation: https://jestjs.io/docs/en/configuration.html
+/*
+  Documentation:
+    https://jestjs.io/docs/configuration#projects-arraystring--projectconfig
+*/
 
 module.exports = {
-  // projects: ['<rootDir>/tests/*', '<rootDir>/__e2e__/*'],
-  // preset: 'jest-dynalite',
-  testEnvironment: 'node',
-  testMatch: ['**/tests/**/*.test.js'],
-  testPathIgnorePatterns: [
-    '/node_modules',
+  preset: './jest.preset.js',
+  projects: [
+    '<rootDir>/tests/unit',
+    '<rootDir>/tests/dynalite',
+    '<rootDir>/tests/dynamodb',
+    '<rootDir>/tests/kinesis',
   ],
-  globalSetup: '<rootDir>/tests/global-setup.js',
-  setupFiles: ['./tests/setup-files'],
-  setupFilesAfterEnv: ['./tests/setup-files-after-environment.js'],
-  collectCoverage: false,
-  collectCoverageFrom: [
-    '**/src/**/*.{js,jsx}',
-    '!**/node_modules/**',
-  ],
-  coverageThreshold: {
-    global: {branches: 80, functions: 90, lines: 90, statements: 90}
-  },
-  coverageReporters: ['text', 'text-summary', 'json', 'json-summary', 'lcov', 'clover', 'html'],
-  verbose: false,
-  notify: true,
-  // notifyMode: 'failure-change, success-change',
-  notifyMode: 'change',
 }
