@@ -8,6 +8,7 @@ module.exports = {
   projects: [
     '<rootDir>/tests/unit',
     '<rootDir>/tests/dynalite',
+    '<rootDir>/tests/kinesis',
     '<rootDir>/tests/integration',
   ],
 }
