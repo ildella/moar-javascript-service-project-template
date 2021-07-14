@@ -17,7 +17,7 @@ const simulateKinesisWriteRead = writeRead({StreamName, PartitionKey, port})
 
 const payload = {some: 'value'}
 
-test('full integration cycle - single venue - match ok with hubspot', async () => {
+test('send and receive a message trough Kinesis', async () => {
   const Records = await simulateKinesisWriteRead(payload)
   expect(Records).toHaveLength(1)
 })

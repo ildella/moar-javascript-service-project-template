@@ -1,6 +1,7 @@
 const {DynamoDB} = require('aws-sdk')
 
 const {DocumentClient} = DynamoDB
+
 const {
   domain = 'template',
   stage = 'ci',
@@ -8,6 +9,7 @@ const {
 } = process.env
 
 const findStage = stage => stage === 'ci' ? 'dev' : stage
+
 const findApp = app => app === '' ? '' : `-${app}`
 
 const defaultDynamoOptions = {

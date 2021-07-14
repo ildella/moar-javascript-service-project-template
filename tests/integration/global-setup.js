@@ -1,6 +1,6 @@
 require('../aws-init')
 
-const {get} = require('../aws-commons')
+const {get} = require('../../src/commons/aws-ssm-utils')
 // const {authenticate} = require('../../src/commons/clients')
 
 module.exports = async () => {

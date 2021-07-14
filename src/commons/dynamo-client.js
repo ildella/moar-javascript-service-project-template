@@ -21,9 +21,10 @@ const client = ({documentClient, namingConvention}) => ({
 
   batchWrite: batch => documentClient.batchWrite(batch).promise(),
 
-  // /* eslint-disable fp/no-rest-parameters */
+  /* eslint-disable fp/no-rest-parameters */
   scan: ({TableName, ...Parameters}) =>
     documentClient.scan({TableName: namingConvention(TableName), ...Parameters}).promise(),
+
   query: ({TableName, ...Parameters}) =>
     documentClient.query({TableName: namingConvention(TableName), ...Parameters}).promise(),
 
