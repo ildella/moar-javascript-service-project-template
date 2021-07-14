@@ -1,0 +1,49 @@
+{
+  "name": "ildella-nodejs-template",
+  "version": "0.2.0",
+  "engines": {
+    "node": ">=12.10"
+  },
+  "scripts": {
+    "ci.validate": "circleci config validate",
+    "cloc": "find src -name '*.js' | xargs wc -l",
+    "cpd": "pmd cpd --minimum-tokens 16 --files src/,tests/ --language ecmascript --failOnViolation false > cpd.report",
+    "depcheck": "depcheck",
+    "lint": "eslint . --max-warnings 5",
+    "lint.print": "eslint --print-config src/config.js >> eslint-config.js",
+    "npm-check": "npm-check",
+    "test": "jest",
+    "test.watch": "yarn test --watch",
+    "test.ci": "yarn test --ci"
+  },
+  "dependencies": {
+    "JSONStream": "1.3.5",
+    "ajv": "8.6.1",
+    "ajv-formats": "2.1.0",
+    "aws-sdk": "2.942.0",
+    "axios": "0.21.1",
+    "csv-parse": "4.16.0",
+    "dayjs": "1.10.6",
+    "highland": "2.13.5",
+    "nodemailer": "6.6.2",
+    "throwable-http-errors": "2.1.0",
+    "tracer": "1.1.5"
+  },
+  "devDependencies": {
+    "depcheck": "1.4.2",
+    "eslint": "7.30.0",
+    "eslint-config-node-opinionated": "0.4.0",
+    "eslint-plugin-fp": "2.3.0",
+    "eslint-plugin-jest": "24.3.6",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "5.1.0",
+    "eslint-plugin-security": "1.4.0",
+    "eslint-plugin-sonarjs": "0.9.1",
+    "eslint-plugin-unicorn": "34.0.1",
+    "jest": "27.0.6",
+    "jest-dynalite": "3.3.1",
+    "kinesalite": "3.3.3",
+    "node-notifier": "10.0.0",
+    "uuid": "8.3.2"
+  }
+}

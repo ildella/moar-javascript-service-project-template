@@ -10,11 +10,11 @@ orbs:
 
 jobs:
   lint:
+    # These next lines define a Docker executor: https://circleci.com/docs/2.0/executor-types/
+    # You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
+    # A list of available CircleCI Docker Convenience Images are available here: https://circleci.com/developer/images/image/cimg/node
     docker:
       - image: cimg/node:14.17
-    # executor:
-    #   name: node/default
-    #   tag: '14.17'
     steps:
       - checkout
       - node/install-packages:
@@ -30,42 +30,71 @@ jobs:
           pkg-manager: yarn
       - run:
           command: yarn audit --groups dependencies
-  unit-tests:  
-    # These next lines define a Docker executor: https://circleci.com/docs/2.0/executor-types/
-    # You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
-    # A list of available CircleCI Docker Convenience Images are available here: https://circleci.com/developer/images/image/cimg/node
+  tests:  
     docker:
       - image: cimg/node:14.17
     steps:
-      # Checkout the code as the first step.
       - checkout
       - node/install-packages:
           pkg-manager: yarn 
       - run:
           name: Run tests
-          command: yarn test
+          command: yarn test.ci
+  coverage:  
+    docker:
+      - image: cimg/node:14.17
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn 
+      - run:
+          name: Run tests with coverage
+          command: yarn test.ci --coverage
+  deploy-dev:  
+    docker:
+      - image: cimg/node:14.17
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn 
+      - run:
+          name: Deploy to Dev
+          command: yarn deploy.dev
+  deploy-prod:  
+    docker:
+      - image: cimg/node:14.17
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn 
+      - run:
+          name: Deploy to Prod
+          command: yarn deploy.prod
 
 workflows:
-  # Below is the definition of your workflow.
-  # Inside the workflow, you provide the jobs you want to run, e.g this workflow runs the build-and-test job above.
-  # CircleCI will run this workflow on every commit.
-  # For more details on extending your workflow, see the configuration docs: https://circleci.com/docs/2.0/configuration-reference/#workflows
+  # Configuration docs: https://circleci.com/docs/2.0/configuration-reference/#workflows
   check-and-build: 
     jobs:
       - lint
       - audit
-      - unit-tests
-      # - deploy-dev:
-      #   requires:
-      #     - unit-tests
-      #     - lint
-      #     - audit
-      #     # - e2e-test
-      #     # - performance-test
-      #   filters:
-      #     branches:
-      #       only: master
-
+      - tests:
+          context: AWS
+      - coverage:
+          context: AWS
+          requires:
+           - tests
+      - deploy-dev:
+          context: AWS
+      - deploy-prod:
+          context: AWS
+          requires:
+           - tests
+           - lint
+           - audit
+           - deploy-dev
+          filters:
+            branches:
+              only: master
 
 ## Advanced workflow - NodeJS version matrix
 
