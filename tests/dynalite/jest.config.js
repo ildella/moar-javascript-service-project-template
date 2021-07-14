@@ -5,5 +5,5 @@ module.exports = {
   // preset: 'jest-dynalite',
   // globalSetup: './global-setup',
   setupFiles: ['./setup-files'],
-  setupFilesAfterEnv: ['./setup-files-after-environment'],
+  setupFilesAfterEnv: ['../setup-files-after-environment'],
 }

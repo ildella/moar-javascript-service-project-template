@@ -9,6 +9,6 @@ module.exports = {
     '<rootDir>/tests/unit',
     '<rootDir>/tests/dynalite',
     // '<rootDir>/tests/dynamodb',
-    // '<rootDir>/tests/kinesis',
+    '<rootDir>/tests/kinesis',
   ],
 }

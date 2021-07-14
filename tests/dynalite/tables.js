@@ -1,5 +1,5 @@
 const aTable = {
-  TableName: 'domain-dev-app-object',
+  TableName: 'domain-dev-object',
   KeySchema: [
     {AttributeName: 'id', KeyType: 'HASH'},
     {AttributeName: 'value', KeyType: 'RANGE'},
