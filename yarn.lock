@@ -971,10 +971,10 @@ asynckit@^0.4.0:
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
   integrity sha1-x57Zf380y48robyXkLzDZkdLS3k=
 
-aws-sdk@2.942.0:
-  version "2.942.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.942.0.tgz#594d2e629ab4a2286eaf69c54658cea3acce4ec7"
-  integrity sha512-9Y+DWSTvolTJe0nl55sKnsPgtfBCV8WKDE8cAUhgn9MIb4tAGpwejS14AUmqeZ12J58AsgPT3PffdI7Hq9IEtQ==
+aws-sdk@2.945.0:
+  version "2.945.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.945.0.tgz#ebd90832a664a192b12edf755af31be70dc18909"
+  integrity sha512-tkcoFAUol7c+9ZBnXsBTKfsj9bNckJ7uzj7FdD/a8AMt/6/18LlEISCiuHFl9qr8MItcON7UgnphJdFCTV7zBw==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
@@ -2444,10 +2444,10 @@ jest-docblock@^27.0.6:
   dependencies:
     detect-newline "^3.0.0"
 
-jest-dynalite@3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/jest-dynalite/-/jest-dynalite-3.3.1.tgz#4f7e550a424abd5aced477636219b75d71ab525a"
-  integrity sha512-Wg+mfBYxRGoPAB3MLSHJvEL7G2dSJAq6hEQZ1gIqc3lm/4mqlSoiUW5ZtO/HQld32nAFEUF1dgSjRXr1OJ44BQ==
+jest-dynalite@3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/jest-dynalite/-/jest-dynalite-3.4.1.tgz#463d61b88e6e86a0687d8094fd84ee618dc1241c"
+  integrity sha512-8lFo3/Qmza0yT1kYDrNsjjarGcs1WKFV4u6nBue2xuCWVRg6pW9RiHc7j0efeqqijpRL7HE3e6LmwIHnECnpcA==
   dependencies:
     "@aws/dynamodb-auto-marshaller" "^0.7.1"
     dynalite "^3.0.0"
@@ -3218,11 +3218,6 @@ node-releases@^1.1.71:
   version "1.1.73"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.73.tgz#dd4e81ddd5277ff846b80b52bb40c49edf7a7b20"
   integrity sha512-uW7fodD6pyW2FZNZnp/Z3hvWKeEW1Y8R1+1CnErE8cXFXzl5blBOoVB41CvMer6P6Q0S5FXDwcHgFd1Wj0U9zg==
-
-nodemailer@6.6.2:
-  version "6.6.2"
-  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.6.2.tgz#e184c9ed5bee245a3e0bcabc7255866385757114"
-  integrity sha512-YSzu7TLbI+bsjCis/TZlAXBoM4y93HhlIgo0P5oiA2ua9Z4k+E2Fod//ybIzdJxOlXGRcHIh/WaeCBehvxZb/Q==
 
 nofilter@^1.0.4:
   version "1.0.4"
