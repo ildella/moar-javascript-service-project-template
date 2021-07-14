@@ -4,7 +4,7 @@ const {DynamoDB} = require('aws-sdk')
 
 const {DocumentClient} = DynamoDB
 const defaultDynamoOptions = {
-  httpOptions: {connectTimeout: 25000, timeout: 25000},
+  httpOptions: {connectTimeout: 25_000, timeout: 25_000},
   maxRetries: 2,
 }
 const documentClient = (dynamoOptions = defaultDynamoOptions) => new DocumentClient(dynamoOptions)

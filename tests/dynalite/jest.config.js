@@ -3,7 +3,7 @@
 module.exports = {
   preset: '../../jest.preset.js',
   // preset: 'jest-dynalite',
-  globalSetup: './global-setup',
+  // globalSetup: './global-setup',
   setupFiles: ['./setup-files'],
   setupFilesAfterEnv: ['./setup-files-after-environment'],
 }

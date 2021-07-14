@@ -9,7 +9,7 @@
   },
   "scripts": {
     "cpd": "scripts/cpd",
-    "lint": "eslint . --max-warnings 0",
+    "lint": "eslint . --max-warnings 3",
     "lint.fix": "yarn lint --fix",
     "test": "jest",
     "test.watch": "jest --watch",
@@ -20,17 +20,25 @@
     "release.patch": "yarn version --patch && git push && git push --tags"
   },
   "devDependencies": {
-    "aws-sdk": "2.927.0",
-    "eslint": "7.28.0",
+    "eslint": "7.30.0",
     "eslint-config-node-opinionated": "0.4.0",
+    "eslint-plugin-fp": "2.3.0",
     "eslint-plugin-jest": "24.3.6",
     "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "5.1.0",
     "eslint-plugin-security": "1.4.0",
-    "eslint-plugin-sonarjs": "0.8.0-125",
-    "highland": "2.13.5",
-    "jest": "27.0.4",
-    "jest-dynalite": "3.3.1",
+    "eslint-plugin-sonarjs": "0.9.1",
+    "eslint-plugin-unicorn": "34.0.1",
+    "jest": "27.0.6",
+    "jest-dynalite": "3.4.0",
     "kinesalite": "3.3.3",
     "node-notifier": "10.0.0"
+  },
+  "dependencies": {
+    "aws-sdk": "2.945.0",
+    "highland": "2.13.5"
+  },
+  "peerDependencies": {
+    "kinesalite": "3.3.3"
   }
 }
