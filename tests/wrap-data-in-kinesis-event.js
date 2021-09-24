@@ -4,7 +4,7 @@ module.exports = ({partitionKey, data}) => ({
       kinesis: {
         partitionKey,
         data,
-      }
-    }
-  ]
+      },
+    },
+  ],
 })

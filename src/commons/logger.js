@@ -14,8 +14,8 @@ const local = ({level = 'info'} = {}) => tracer.colorConsole({
   level,
   dateformat: 'HH:MM:ss',
   transport: [
-    data => { process.stdout.write(`${data.output}\n`) }
-  ]
+    data => { process.stdout.write(`${data.output}\n`) },
+  ],
 })
 
 module.exports = {

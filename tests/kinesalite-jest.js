@@ -20,7 +20,7 @@ const startServer = ({port}, done) => {
 const createStream = ({StreamName, port}, done) => {
   kinesis(port).createStream({StreamName, ShardCount: 1}, (error, data) => {
     if (error) return done(error)
-    // console.log(`Stream ${StreamName} created -->`, data)
+    console.log(`Stream ${StreamName} created -->`, data)
     done()
   })
 }
@@ -28,7 +28,7 @@ const createStream = ({StreamName, port}, done) => {
 const closeAndTerminate = ({StreamName, port}, done) => {
   __([StreamName])
     .map(StreamName =>
-      kinesis(port).deleteStream({StreamName, EnforceConsumerDeletion: true}).promise()
+      kinesis(port).deleteStream({StreamName, EnforceConsumerDeletion: true}).promise(),
     )
     .flatMap(__)
     .done(() => {

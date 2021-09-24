@@ -1,5 +1,5 @@
 const {
-  all
+  all,
 } = require('./tests/dynalite/tables')
 
 module.exports = {

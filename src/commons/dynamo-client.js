@@ -15,8 +15,8 @@ const client = ({documentClient, namingConvention}) => ({
 
   wrapPutRequestInBatch: TableName => putRequests => ({
     RequestItems: {
-      [namingConvention(TableName)]: putRequests
-    }
+      [namingConvention(TableName)]: putRequests,
+    },
   }),
 
   batchWrite: batch => documentClient.batchWrite(batch).promise(),

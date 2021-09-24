@@ -1,23 +1,21 @@
 module.exports = {
-  env: {
-    es6: true, // ES6 globals + ES6 syntax
-    node: true,
-  },
-  parserOptions: {
-    ecmaVersion: 2020, // ES6 syntax only
-    ecmaFeatures: {
-      impliedStrict: true,
-    },
-  },
+  // env: {
+  //   es6: true, // ES6 globals + ES6 syntax
+  //   node: true,
+  // },
+  // parserOptions: {
+  //   ecmaVersion: 2020, // ES6 syntax only
+  //   ecmaFeatures: {
+  //     impliedStrict: true,
+  //   },
+  // },
   extends: [
     'node-opinionated',
     'plugin:jest/recommended',
-    'plugin:promise/recommended',
   ],
   plugins: [
     'jest',
     'fp',
-    'promise',
     'unicorn',
   ],
   overrides: [

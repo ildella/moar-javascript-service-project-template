@@ -16,22 +16,22 @@
     "test.ci": "yarn test --ci"
   },
   "dependencies": {
-    "aws-sdk": "2.945.0",
+    "aws-sdk": "2.994.0",
     "highland": "2.13.5",
     "tracer": "1.1.5"
   },
   "devDependencies": {
     "depcheck": "1.4.2",
-    "eslint": "7.30.0",
+    "eslint": "7.32.0",
     "eslint-config-node-opinionated": "0.4.0",
     "eslint-plugin-fp": "2.3.0",
-    "eslint-plugin-jest": "24.3.6",
+    "eslint-plugin-jest": "24.4.2",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "5.1.0",
     "eslint-plugin-security": "1.4.0",
-    "eslint-plugin-sonarjs": "0.9.1",
-    "eslint-plugin-unicorn": "34.0.1",
-    "jest": "27.0.6",
+    "eslint-plugin-sonarjs": "0.10.0",
+    "eslint-plugin-unicorn": "36.0.0",
+    "jest": "26.6.3",
     "jest-dynalite": "3.4.1",
     "kinesalite": "3.3.3",
     "node-notifier": "10.0.0"

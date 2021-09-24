@@ -15,7 +15,7 @@ module.exports = {
   // ],
   coveragePathIgnorePatterns: ['/node_modules/'],
   coverageThreshold: {
-    global: {branches: 55, functions: 80, lines: 90, statements: 90}
+    global: {branches: 55, functions: 80, lines: 90, statements: 90},
   },
   coverageReporters: ['text', 'text-summary', 'json', 'json-summary', 'lcov', 'clover', 'html'],
   verbose: false,
