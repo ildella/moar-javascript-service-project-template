@@ -1772,10 +1772,10 @@ eslint-ast-utils@^1.0.0:
     lodash.get "^4.4.2"
     lodash.zip "^4.2.0"
 
-eslint-config-node-opinionated@0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-node-opinionated/-/eslint-config-node-opinionated-0.4.0.tgz#9d1ffe9b38384dc3557555ab5cbb37e7da5d93f0"
-  integrity sha512-2AG+yNggRkhQeCDJ+0+H8+s+ou/AVuWbfGdwkp9yCIdSUSwkYeq/Pfk9FwpGakV4SK90K3IUjDiJ6KgYdqIxbQ==
+eslint-config-node-opinionated@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-node-opinionated/-/eslint-config-node-opinionated-0.5.0.tgz#be3b2c538395a094c7c051be22c5aa0072f6d5e3"
+  integrity sha512-N+qg2sFaKcNzYIG7DOqij+qKehyHByV7mNKH1cMr/b2SJocwgj12q/Cdx4Krv3AszKyTAdfvyqJ0XIv7zsgKzg==
 
 eslint-plugin-es@^3.0.0:
   version "3.0.1"
