@@ -4,6 +4,7 @@
   "engines": {
     "node": ">=12.10"
   },
+  "license": "MIT",
   "scripts": {
     "ci.validate": "circleci config validate",
     "cloc": "find src -name '*.js' | xargs wc -l",
