@@ -52,7 +52,7 @@ module.exports = {
       },
     },
     {
-      files: ['**/tests/**', '**/fixtures/**', '**/runners/**'],
+      files: ['**/tests/**', '**/fixtures/**'],
       rules: {
         'max-nested-callbacks': ['warn', 3],
         'max-lines': ['warn', 200],

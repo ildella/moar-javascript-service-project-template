@@ -1,6 +1,6 @@
 const {
   all,
-} = require('./tests/dynalite/tables')
+} = require('./tables')
 
 module.exports = {
   // tables: async () => { ... } // async is also working here

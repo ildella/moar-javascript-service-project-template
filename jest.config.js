@@ -7,7 +7,7 @@ module.exports = {
   preset: './jest.preset.js',
   projects: [
     '<rootDir>/tests/unit',
-    '<rootDir>/tests/dynalite',
+    '<rootDir>/tests/dynamodb',
     '<rootDir>/tests/kinesis',
     '<rootDir>/tests/integration',
   ],

@@ -1,6 +1,6 @@
 {
   "name": "ildella-nodejs-template",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "engines": {
     "node": ">=12.10"
   },
@@ -17,23 +17,24 @@
     "test.ci": "yarn test --ci"
   },
   "dependencies": {
-    "aws-sdk": "2.994.0",
+    "aws-sdk": "2.1012.0",
+    "exstream.js": "0.18.0",
     "highland": "2.13.5",
     "tracer": "1.1.5"
   },
   "devDependencies": {
     "depcheck": "1.4.2",
-    "eslint": "7.32.0",
+    "eslint": "8.0.1",
     "eslint-config-node-opinionated": "0.5.0",
     "eslint-plugin-fp": "2.3.0",
-    "eslint-plugin-jest": "24.4.2",
+    "eslint-plugin-jest": "25.2.2",
     "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "5.1.0",
+    "eslint-plugin-promise": "5.1.1",
     "eslint-plugin-security": "1.4.0",
     "eslint-plugin-sonarjs": "0.10.0",
-    "eslint-plugin-unicorn": "36.0.0",
+    "eslint-plugin-unicorn": "37.0.1",
     "jest": "26.6.3",
-    "jest-dynalite": "3.4.1",
+    "jest-dynalite": "3.4.4",
     "kinesalite": "3.3.3",
     "node-notifier": "10.0.0"
   }
