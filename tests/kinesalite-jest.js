@@ -28,7 +28,7 @@ const createStream = ({StreamName, port}, done) => {
 const closeAndTerminate = ({StreamName, port}, done) => {
   __([StreamName])
     .map(StreamName =>
-      kinesis(port).deleteStream({StreamName, EnforceConsumerDeletion: true}).promise(),
+      kinesis(port).deleteStream({StreamName, EnforceConsumerDeletion: true}).promise()
     )
     .flatMap(__)
     .done(() => {

@@ -12,7 +12,7 @@ const sendToStream = ({
       Data: JSON.stringify(payload),
       PartitionKey,
     }).promise()),
-    __.flatMap(__),
+    __.flatMap(__)
   )
 
 module.exports = {
