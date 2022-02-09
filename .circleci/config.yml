@@ -6,7 +6,7 @@ orbs:
   # The Node.js orb contains a set of prepackaged CircleCI configuration you can utilize
   # Orbs reduce the amount of configuration required for common tasks. 
   # See the orb documentation here: https://circleci.com/developer/orbs/orb/circleci/node
-  node: circleci/node@4.1
+  node: circleci/node@4.7.0
 
 jobs:
   lint:
@@ -14,7 +14,7 @@ jobs:
     # You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # A list of available CircleCI Docker Convenience Images are available here: https://circleci.com/developer/images/image/cimg/node
     docker:
-      - image: cimg/node:14.17
+      - image: cimg/node:14.18
     steps:
       - checkout
       - node/install-packages:
@@ -23,7 +23,7 @@ jobs:
           command: yarn lint
   audit:
     docker:
-      - image: cimg/node:14.17
+      - image: cimg/node:14.18
     steps:
       - checkout
       - node/install-packages:
@@ -32,7 +32,7 @@ jobs:
           command: yarn audit --groups dependencies
   tests:  
     docker:
-      - image: cimg/node:14.17
+      - image: cimg/node:14.18
     steps:
       - checkout
       - node/install-packages:
@@ -42,7 +42,7 @@ jobs:
           command: yarn test.ci
   coverage:  
     docker:
-      - image: cimg/node:14.17
+      - image: cimg/node:14.18
     steps:
       - checkout
       - node/install-packages:
@@ -52,7 +52,7 @@ jobs:
           command: yarn test.ci --coverage
   deploy-dev:  
     docker:
-      - image: cimg/node:14.17
+      - image: cimg/node:14.18
     steps:
       - checkout
       - node/install-packages:
@@ -62,7 +62,7 @@ jobs:
           command: yarn deploy.dev
   deploy-prod:  
     docker:
-      - image: cimg/node:14.17
+      - image: cimg/node:14.18
     steps:
       - checkout
       - node/install-packages:
