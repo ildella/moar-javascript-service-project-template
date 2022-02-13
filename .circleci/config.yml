@@ -80,9 +80,9 @@ workflows:
       - lint
       - audit
       - tests:
-          context: AWS
+          # context: AWS
       - coverage:
-          context: AWS
+          # context: AWS
           requires:
            - tests
       ## Nothing to deploy for the template
