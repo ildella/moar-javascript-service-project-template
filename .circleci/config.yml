@@ -79,12 +79,14 @@ workflows:
     jobs:
       - lint
       - audit
-      - tests:
-          # context: AWS
-      - coverage:
-          # context: AWS
-          requires:
-           - tests
+      - tests
+      - coverage
+      # - tests:
+      #     context: AWS
+      # - coverage:
+      #     context: AWS
+      #     requires:
+      #      - tests
       ## Nothing to deploy for the template
       # - deploy-dev:
       #     context: AWS
