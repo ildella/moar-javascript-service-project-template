@@ -1,35 +1,35 @@
-name: test
-on: 
-  push:
-    branches: [master]
-  pull_request:
-    branches: ['*']
+# name: test
+# on: 
+#   push:
+#     branches: [master]
+#   pull_request:
+#     branches: ['*']
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    # runs-on: ${{ matrix.os }}
+# jobs:
+#   test:
+#     runs-on: ubuntu-latest
+#     # runs-on: ${{ matrix.os }}
 
-    strategy:
-      matrix:
-        node-version: [12.x, 14.x, 16.x]
-        # os: [ubuntu-latest, windows-latest, macos-latest]
+#     strategy:
+#       matrix:
+#         node-version: [12.x, 14.x, 16.x]
+#         # os: [ubuntu-latest, windows-latest, macos-latest]
 
-    steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-      with:
-        # node-version: '14.x'
-        node-version: ${{ matrix.node-version }}
-        registry-url: 'https://registry.npmjs.org'
-    - run: yarn install
-    - run: yarn audit --groups dependencies
-    - run: yarn lint
-    # - run: yarn audit --groups dependencies
-    - run: yarn test.ci
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-      if: matrix.node-version == '14.x'
-    # - uses: codecov/codecov-action@v2  
+#     steps:
+#     - uses: actions/checkout@v2
+#     - uses: actions/setup-node@v1
+#       with:
+#         # node-version: '14.x'
+#         node-version: ${{ matrix.node-version }}
+#         registry-url: 'https://registry.npmjs.org'
+#     - run: yarn install
+#     - run: yarn audit --groups dependencies
+#     - run: yarn lint
+#     # - run: yarn audit --groups dependencies
+#     - run: yarn test.ci
+#     - name: Coveralls
+#       uses: coverallsapp/github-action@master
+#       with:
+#         github-token: ${{ secrets.GITHUB_TOKEN }}
+#       if: matrix.node-version == '14.x'
+#     # - uses: codecov/codecov-action@v2  
