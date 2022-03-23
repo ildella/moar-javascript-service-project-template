@@ -81,8 +81,6 @@ workflows:
       - lint
       - audit
       - tests
-      # - tests:
-          # context: AWS
       - coverage:
           # context: AWS
           requires:
