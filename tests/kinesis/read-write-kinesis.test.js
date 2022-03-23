@@ -1,5 +1,3 @@
-// require('../aws-init')
-
 const {
   startServer,
   createStream,
@@ -12,7 +10,7 @@ const PartitionKey = 'integration-test'
 const port = 5577
 
 beforeAll(done => startServer({port}, done))
-// beforeAll(done => createStream({port, StreamName}, done))
+beforeAll(done => createStream({port, StreamName}, done))
 // afterAll(done => closeAndTerminate({port, StreamName}, done))
 
 const simulateKinesisWriteRead = writeRead({StreamName, PartitionKey, port})
