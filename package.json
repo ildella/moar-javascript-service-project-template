@@ -1,7 +1,7 @@
 {
   "name": "ildella-nodejs-template",
   "description": "NodeJS project template with some facilities I work with.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "engines": {
     "node": ">=12.10"
   },

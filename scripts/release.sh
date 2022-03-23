@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-version=$(cat "package.json" |jq .version)
+version=$(cat "package.json" |jq -r .version)
 echo releasing "v$version"
 
 git tag "v$version"
