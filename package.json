@@ -14,8 +14,8 @@
     "lint": "eslint . --max-warnings 0",
     "lint.print": "eslint --print-config src/config.js >> eslint-config.js",
     "test": "jest",
-    "test.watch": "yarn test --watch",
-    "test.ci": "yarn test --ci"
+    "test.watch": "jest --watch",
+    "test.ci": "jest --ci"
   },
   "dependencies": {
     "aws-sdk": "2.1098.0",
