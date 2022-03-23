@@ -64,6 +64,7 @@ module.exports = {
         // 'jest/no-test-callback': 'off',
         'jest/no-done-callback': 'off',
         'security/detect-non-literal-fs-filename': 'off',
+        'security/detect-non-literal-require': 'off',
         'sonarjs/no-duplicate-string': 'off',
       },
     },
