@@ -1,5 +1,3 @@
-// const {curry} = require('exstream.js')
-
 const createCollection = (database, name, jsonSchema) => database.createCollection(name, {
   validator: {$jsonSchema: jsonSchema},
 })
