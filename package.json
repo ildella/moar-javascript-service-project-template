@@ -14,33 +14,33 @@
     "lint": "eslint . --max-warnings 0",
     "lint.print": "eslint --print-config src/config.js >> eslint-config.js",
     "test": "jest",
-    "test.watch": "yarn test --watch",
-    "test.ci": "yarn test --ci"
+    "test.watch": "jest --watch",
+    "test.ci": "jest --ci"
   },
   "dependencies": {
-    "aws-sdk": "2.1071.0",
-    "axios": "0.26.0",
-    "exstream.js": "0.19.0",
-    "fastify": "3.27.1",
+    "aws-sdk": "2.1098.0",
+    "axios": "0.26.1",
+    "exstream.js": "0.20.0",
+    "fastify": "3.27.4",
     "highland": "2.13.5",
     "tracer": "1.1.5"
   },
   "devDependencies": {
     "depcheck": "1.4.3",
-    "eslint": "8.9.0",
+    "eslint": "8.11.0",
     "eslint-config-node-opinionated": "0.5.1",
     "eslint-plugin-fp": "2.3.0",
-    "eslint-plugin-jest": "26.1.1",
+    "eslint-plugin-jest": "26.1.2",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "6.0.0",
     "eslint-plugin-security": "1.4.0",
     "eslint-plugin-sonarjs": "0.12.0",
-    "eslint-plugin-unicorn": "41.0.0",
+    "eslint-plugin-unicorn": "41.0.1",
     "jest": "26.6.3",
     "jest-dynalite": "3.4.4",
     "kinesalite": "3.3.3",
-    "mongodb": "4.4.0",
-    "mongodb-memory-server-core": "8.4.0",
+    "mongodb": "4.4.1",
+    "mongodb-memory-server-core": "8.4.1",
     "node-notifier": "10.0.1"
   }
 }

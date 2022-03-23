@@ -30,11 +30,12 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
       - run:
-          command: yarn audit
-          # command: yarn audit --groups dependencies
+          # command: yarn audit
+          command: yarn audit --groups dependencies
   tests:  
     docker:
       - image: cimg/node:14.19
+      - image: circleci/mongo:5.0.6-ram
     steps:
       - checkout
       - node/install-packages:
@@ -45,6 +46,7 @@ jobs:
   coverage:  
     docker:
       - image: cimg/node:14.19
+      - image: circleci/mongo:5.0.6-ram
     steps:
       - checkout
       - node/install-packages:
@@ -80,10 +82,8 @@ workflows:
       - lint
       - audit
       - tests
-      # - tests:
-      #     context: AWS
       - coverage:
-      #     context: AWS
+          # context: AWS
           requires:
            - tests
       ## Nothing to deploy for the template
