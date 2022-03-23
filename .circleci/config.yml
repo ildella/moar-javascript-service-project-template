@@ -80,9 +80,8 @@ workflows:
     jobs:
       - lint
       - audit
-      # - tests
       - tests:
-          context: AWS
+          # context: AWS
       - coverage:
           # context: AWS
           requires:
