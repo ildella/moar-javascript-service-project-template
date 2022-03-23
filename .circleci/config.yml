@@ -30,8 +30,8 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
       - run:
-          command: yarn audit
-          # command: yarn audit --groups dependencies
+          # command: yarn audit
+          command: yarn audit --groups dependencies
   tests:  
     docker:
       - image: cimg/node:14.19
