@@ -1,3 +1,5 @@
+require('../aws-init')
+
 const {
   startServer,
   createStream,
