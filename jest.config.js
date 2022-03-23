@@ -4,7 +4,6 @@
 */
 
 module.exports = {
-  preset: './jest.preset.js',
   projects: [
     '<rootDir>/tests/unit',
     '<rootDir>/tests/dynamodb',
