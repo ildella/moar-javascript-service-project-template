@@ -20,7 +20,7 @@ module.exports = {
   ],
   overrides: [
     {
-      files: ['**/src/**', '**'],
+      files: ['**/src/**'],
       extends: [
         'plugin:unicorn/recommended',
         'plugin:fp/recommended',
