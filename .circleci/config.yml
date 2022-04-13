@@ -8,6 +8,7 @@ orbs:
   # See the orb documentation here: https://circleci.com/developer/orbs/orb/circleci/node
   # node: circleci/node@4.7.0
   node: circleci/node@5.0.0
+# TODO: upgrade to cimg/ images --> https://circleci.com/blog/announcing-our-next-generation-convenience-images-smaller-faster-more-deterministic/
 
 jobs:
   lint:
