@@ -13,13 +13,16 @@
     "depcheck": "depcheck",
     "lint": "eslint . --max-warnings 0",
     "lint.print": "eslint --print-config src/config.js >> eslint-config.js",
+    "start.http": "node src/http",
     "test": "jest",
     "test.watch": "jest --watch",
-    "test.ci": "jest --ci"
+    "test.ci": "jest --ci",
+    "test.e2e": "k6 run tests/e2e/smoke.k6.js"
   },
   "dependencies": {
     "aws-sdk": "2.1098.0",
     "axios": "0.26.1",
+    "dayjs": "1.11.1",
     "exstream.js": "0.20.0",
     "fastify": "3.27.4",
     "highland": "2.13.5",
