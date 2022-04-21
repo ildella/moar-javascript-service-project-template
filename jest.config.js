@@ -9,7 +9,7 @@ module.exports = {
     '<rootDir>/tests/dynamodb',
     // '<rootDir>/tests/mongodb',
     '<rootDir>/tests/http',
-    '<rootDir>/tests/kinesis',
+    // '<rootDir>/tests/kinesis',
     '<rootDir>/tests/integration',
   ],
 }
