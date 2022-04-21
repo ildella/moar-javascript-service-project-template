@@ -11,6 +11,6 @@ RUN yarn install --production --frozen-lockfile
 # Bundle app source
 COPY . .
 
-EXPOSE 5001
+EXPOSE 5010
 CMD [ "yarn", "start.http" ]
 # CMD [ "yarn", "start.nest" ]
