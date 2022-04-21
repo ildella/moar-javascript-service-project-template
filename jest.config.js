@@ -7,7 +7,7 @@ module.exports = {
   projects: [
     '<rootDir>/tests/unit',
     '<rootDir>/tests/dynamodb',
-    '<rootDir>/tests/mongodb',
+    // '<rootDir>/tests/mongodb',
     '<rootDir>/tests/http',
     // '<rootDir>/tests/kinesis',
     '<rootDir>/tests/integration',

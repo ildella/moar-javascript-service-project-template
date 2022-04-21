@@ -1,7 +1,7 @@
 module.exports = app => {
   app.get('/health', (request, reply) => {
     reply.send({
-      api: 'Campaign Service',
+      api: 'Health',
       // version: '2019-07-09',
       status: 'ok',
       // documentation: '/docs',

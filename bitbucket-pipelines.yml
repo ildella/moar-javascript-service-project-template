@@ -1,0 +1,78 @@
+image: node:16-alpine
+# image: atlassian/default-image:3
+
+pipelines:
+  default:
+    - parallel:
+        - step:
+            name: Test
+            caches:
+              - node
+            services:
+              - mongo
+            script:
+              - yarn install --frozen-lockfile
+              - yarn test
+        # - step:
+        #     name: Code linting
+        #     caches:
+        #       - node
+        #     script:
+        #       - yarn install --frozen-lockfile
+        #       - yarn lint
+        - step:
+            name: Audit
+            script:
+              - yarn audit --groups production
+    
+    - step:
+        name: Build and publish docker image.
+        services:
+          - docker
+        # caches:
+          # - docker
+        script:
+          - AWS_ACCESS_KEY_ID=$AWSAccessKeyDev
+          - AWS_SECRET_ACCESS_KEY=$AWSSecretKeyDev
+          - AWS_ACCOUNT_ID='7777777777'
+          - AWS_DEFAULT_REGION='eu-west-2'
+          - IMAGE="$BITBUCKET_REPO_SLUG:ci-$BITBUCKET_BUILD_NUMBER"
+          # - echo $IMAGE
+          - docker build -t "$IMAGE" .
+          # - docker images
+          - pipe: atlassian/aws-ecr-push-image:1.5.0
+            variables:
+              AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+              AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+              AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+              IMAGE_NAME: $IMAGE
+    
+    # - step:
+    #     name: Deploy to ECS / Fargate
+    #     script:
+    #       - export IMAGE="$BITBUCKET_REPO_SLUG:ci-$BITBUCKET_BUILD_NUMBER"
+    #       # - export IMAGE="$BITBUCKET_REPO_SLUG:ci-38"
+    #       # - docker images
+    #       - apt-get install gettext-base -yV
+    #       - envsubst < task-definition-template.json > task-definition.json
+    #       - pipe: atlassian/aws-ecs-deploy:1.6.1
+    #         variables:
+    #           AWS_ACCESS_KEY_ID: $AWSAccessKeyDev
+    #           AWS_SECRET_ACCESS_KEY: $AWSSecretKeyDev
+    #           AWS_DEFAULT_REGION: 'eu-west-2'
+    #           CLUSTER_NAME: 'omnia-dev-stack'
+    #           SERVICE_NAME: 'v2-campaign'
+    #           TASK_DEFINITION: 'task-definition.json'
+    #           FORCE_NEW_DEPLOYMENT: 'true'
+    
+    # - step:
+    #     name: End-to-end test
+    #     caches:
+    #       - node
+    #     script:
+    #       - yarn e2e-test
+
+definitions: 
+  services: 
+    mongo: 
+      image: mongo
