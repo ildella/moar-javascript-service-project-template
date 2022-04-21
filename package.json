@@ -8,6 +8,8 @@
   "license": "MIT",
   "scripts": {
     "ci.validate": "circleci config validate",
+    "ci.process": "circleci config process .circleci/config.yml > process.yml",
+    "ci.execute": "circleci local execute --job test",
     "cloc": "find src -name '*.js' | xargs wc -l",
     "cpd": "pmd cpd --minimum-tokens 16 --files src/,tests/ --language ecmascript --failOnViolation false > cpd.report",
     "depcheck": "depcheck",
