@@ -1,14 +1,12 @@
-require('../aws-init')
+// const {aws} = require('ildella-test-commons/')
+// const {awsSsmUtils, awsInit} = aws
+// const {get} = awsSsmUtils
 
-const {get} = require('../../src/commons/aws-ssm-utils')
-// const {authenticate} = require('../../src/commons/clients')
+const get = keyName => Promise.resolve(`${keyName}-xyz-123`)
 
 module.exports = async () => {
-  // const email = await get('email')
-  // const password = await get('password')
   const apiKey = await get('apikey')
 
-  /* eslint-disable fp/no-mutation */
-  // process.env.accessToken = await authenticate({email, password})
+  // eslint-disable-next-line fp/no-mutation
   process.env.apiKey = apiKey
 }

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -euo pipefail
+set -euxo
 
 version=$(cat "package.json" |jq -r .version)
 echo releasing "v$version"

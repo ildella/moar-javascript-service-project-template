@@ -3,11 +3,9 @@
 version: 2.1
 
 orbs:
-  # The Node.js orb contains a set of prepackaged CircleCI configuration you can utilize
-  # Orbs reduce the amount of configuration required for common tasks. 
   # See the orb documentation here: https://circleci.com/developer/orbs/orb/circleci/node
   # node: circleci/node@4.7.0
-  node: circleci/node@5.0.0
+  node: circleci/node@5.0.2
 # TODO: upgrade to cimg/ images --> https://circleci.com/blog/announcing-our-next-generation-convenience-images-smaller-faster-more-deterministic/
 
 jobs:

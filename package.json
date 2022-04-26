@@ -22,12 +22,9 @@
     "test.e2e": "k6 run tests/e2e/smoke.k6.js"
   },
   "dependencies": {
-    "aws-sdk": "2.1098.0",
     "axios": "0.26.1",
     "dayjs": "1.11.1",
     "exstream.js": "0.20.0",
-    "fastify": "3.28.0",
-    "highland": "2.13.5",
     "tracer": "1.1.5"
   },
   "devDependencies": {
