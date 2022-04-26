@@ -2941,10 +2941,10 @@ ignore@^5.1.1, ignore@^5.1.8, ignore@^5.2.0:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.2.0.tgz#6d3bac8fa7fe0d45d9f9be7bac2fc279577e345a"
   integrity sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==
 
-ildella-test-commons@0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/ildella-test-commons/-/ildella-test-commons-0.2.1.tgz#73b1b4ed8ad9d5f14bc66a77031d596a76182a97"
-  integrity sha512-xrHN3nqqzPqny1Mon1kd3qCX0E3Ojukl1JJjLo2qlbq8M69mnVwEiGNyiQGnkZXxEUK0kMlQUxNZuw/FXzDbIw==
+ildella-test-commons@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/ildella-test-commons/-/ildella-test-commons-0.2.2.tgz#74e89db422e8911d75e2afe078e7c883dc70052e"
+  integrity sha512-ULHoZpWTmI+RH9Tti4+ueLgC561s4C1+fa9Q0BG4s18qMy57uXE1ICSaQnSYvXI/sqfb6khMTSjlRaQnQx0kKg==
   dependencies:
     aws-sdk "2.1121.0"
     axios "0.27.1"
