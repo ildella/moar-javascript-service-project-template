@@ -7,6 +7,7 @@
   },
   "license": "MIT",
   "scripts": {
+    "audit.production": "yarn audit --groups dependencies",
     "ci.validate": "circleci config validate",
     "ci.process": "circleci config process .circleci/config.yml > process.yml",
     "ci.execute": "circleci local execute --job test",
@@ -22,25 +23,14 @@
     "test.e2e": "k6 run tests/e2e/smoke.k6.js"
   },
   "dependencies": {
-    "aws-sdk": "2.1098.0",
     "axios": "0.26.1",
     "dayjs": "1.11.1",
     "exstream.js": "0.20.0",
-    "fastify": "3.28.0",
-    "highland": "2.13.5",
     "tracer": "1.1.5"
   },
   "devDependencies": {
     "depcheck": "1.4.3",
-    "eslint": "8.13.0",
-    "eslint-config-node-opinionated": "0.5.1",
-    "eslint-plugin-fp": "2.3.0",
-    "eslint-plugin-jest": "26.1.4",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "6.0.0",
-    "eslint-plugin-security": "1.5.0",
-    "eslint-plugin-sonarjs": "0.13.0",
-    "eslint-plugin-unicorn": "42.0.0",
+    "ildella-test-commons": "0.2.2",
     "jest": "26.6.3",
     "jest-dynalite": "3.4.4",
     "kinesalite": "3.3.3",

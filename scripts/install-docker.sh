@@ -1,5 +1,6 @@
 #!/bin/bash
-set -euxo pipefail
+
+set -euxo
 
 sudo apt remove --purge docker docker.io runc
 sudo apt autoremove --purge -Vy && sudo apt autoclean && sudo apt update

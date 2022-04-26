@@ -3,13 +3,13 @@
     https://jestjs.io/docs/configuration#projects-arraystring--projectconfig
 */
 
+const {jestCommons} = require('ildella-test-commons')
+const {jestPreset} = jestCommons
+
 module.exports = {
+  ...jestPreset,
   projects: [
     '<rootDir>/tests/unit',
-    '<rootDir>/tests/dynamodb',
-    // '<rootDir>/tests/mongodb',
-    '<rootDir>/tests/http',
-    // '<rootDir>/tests/kinesis',
     '<rootDir>/tests/integration',
   ],
 }
