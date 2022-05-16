@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "depcheck": "1.4.3",
-    "ildella-test-commons": "0.2.3",
+    "ildella-test-commons": "0.2.6",
     "jest-dynalite": "3.4.4",
     "kinesalite": "3.3.3",
     "mongodb": "4.5.0",
