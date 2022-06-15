@@ -1,7 +1,7 @@
 {
   "name": "ildella-nodejs-template",
-  "description": "NodeJS project template with some facilities I work with.",
-  "version": "0.7.2",
+  "description": "NodeJS project template with lint, testing and some commons utilities",
+  "version": "0.7.3",
   "engines": {
     "node": ">=12.10"
   },
@@ -24,17 +24,12 @@
   },
   "dependencies": {
     "axios": "0.27.2",
-    "dayjs": "1.11.1",
-    "exstream.js": "0.21.0",
+    "dayjs": "1.11.3",
+    "exstream.js": "0.22.0",
     "tracer": "1.1.5"
   },
   "devDependencies": {
     "depcheck": "1.4.3",
-    "ildella-test-commons": "0.2.6",
-    "jest-dynalite": "3.4.4",
-    "kinesalite": "3.3.3",
-    "mongodb": "4.5.0",
-    "mongodb-memory-server-core": "8.5.1",
-    "node-notifier": "10.0.1"
+    "ildella-test-commons": "0.3.3"
   }
 }
