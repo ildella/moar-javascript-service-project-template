@@ -1,4 +1,29 @@
-const {eslintConfigs} = require('ildella-test-commons')
-const {jestFpUnicornEslintConfig} = eslintConfigs
-
-module.exports = {...jestFpUnicornEslintConfig}
+module.exports = {
+  extends: [
+    'node-moar',
+  ],
+  plugins: [
+    'jest',
+    'fp',
+    'unicorn',
+  ],
+  overrides: [
+    {
+      files: ['**/src/**'],
+      extends: [
+        'node-moar-stricter',
+      ],
+    },
+    {
+      files: [
+        '**/tests/**',
+        '.eslintrc.js',
+        'jest.config.js',
+        'jest.config.*.js',
+      ],
+      extends: [
+        'node-moar-test',
+      ],
+    },
+  ],
+}

@@ -992,10 +992,10 @@ available-typed-arrays@^1.0.5:
   resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
-aws-sdk@2.1191.0:
-  version "2.1191.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1191.0.tgz#2748567252c68ef37a8ce29f48aa063681083918"
-  integrity sha512-G8hWvuc+3rxTfHqsnUwGx/fy8zlnVPtlNesXMHlwU/l4oBx3+Weg0Nhng6HvLGzUJifzlnSKDXrOsWVkHtuZ1w==
+aws-sdk@2.1197.0:
+  version "2.1197.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1197.0.tgz#d679f52353f03e598ffed5609ed65593cef1f83f"
+  integrity sha512-BUxYU+gzxCylEM37NeGcS5kWotXVmKrOBG9+/+U+tnOTW7/3yNBrBfhPrs5IgMhm7H38CLWgOqwJaGDlYzwH/Q==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
@@ -1375,11 +1375,6 @@ dateformat@4.5.1:
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-4.5.1.tgz#c20e7a9ca77d147906b6dc2261a8be0a5bd2173c"
   integrity sha512-OD0TZ+B7yP7ZgpJf5K2DIbj3FZvFvxgFUuaqA/V5zTjAtAAXZ1E8bktHxmAGs4x5b7PflqA9LeQ84Og7wYtF7Q==
 
-dayjs@1.11.4:
-  version "1.11.4"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.4.tgz#3b3c10ca378140d8917e06ebc13a4922af4f433e"
-  integrity sha512-Zj/lPM5hOvQ1Bf7uAvewDaUcsJoI6JmNqmHhHl3nyumwe0XHwt8sWdOVAPACJzCebL8gQCi+K49w7iKWnGwX9g==
-
 dayjs@1.11.5:
   version "1.11.5"
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.5.tgz#00e8cc627f231f9499c19b38af49f56dc0ac5e93"
@@ -1626,10 +1621,20 @@ eslint-ast-utils@^1.0.0:
     lodash.get "^4.4.2"
     lodash.zip "^4.2.0"
 
-eslint-config-node-moar@0.7.2:
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/eslint-config-node-moar/-/eslint-config-node-moar-0.7.2.tgz#f39f41cbf459655f37312f722dc06c24dfe5a27e"
-  integrity sha512-q8I3exfCEuJoYyATnFeIIIcVg78h40P2vnwH2VLbKXRJ+3lJdb1Wd53/vmTnU5pI/Q+0B9Ka0VGNLVkhJWAlnQ==
+eslint-config-node-moar-stricter@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-node-moar-stricter/-/eslint-config-node-moar-stricter-0.1.0.tgz#9f23b608f102a3d98850ba5b4058d7fee9eda609"
+  integrity sha512-3BV0RDpRQ6cTIJENz4KPWzucLaHRTMIAFFE2lZhk6k8/wDTI/7HS+1CEb+91f4d92ZQbLs9T0Fdr8BrqGBPeFg==
+
+eslint-config-node-moar-test@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-node-moar-test/-/eslint-config-node-moar-test-0.1.0.tgz#c17f9860724becdfeb005bb525c8c48bbe93a22b"
+  integrity sha512-Y/lcQrnqYp9ivFZiDgVVuQPg7Zb1768ZKclRhBU6v3RWYnNGUSMd1H8cDUG+0El1zRvy7m72Tv2pQdwg9LkmSw==
+
+eslint-config-node-moar@0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-node-moar/-/eslint-config-node-moar-0.8.1.tgz#9ef67423cca35e7fb9c8de38cde6f60f35b41cf6"
+  integrity sha512-piamh5ULamlJ44bDS06pm+mPB95Sy7u3dZQNRMireD7Vu22hVfjEEvwXjm4Dt/5qX9wjAQ01nI/9nq3nJB8xXQ==
 
 eslint-plugin-es@^3.0.0:
   version "3.0.1"
@@ -1649,10 +1654,10 @@ eslint-plugin-fp@2.3.0:
     lodash "^4.13.1"
     req-all "^0.1.0"
 
-eslint-plugin-jest@26.8.2:
-  version "26.8.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-26.8.2.tgz#42a1248a5ade2bc589eb0f9c4e0608dd89b18cf3"
-  integrity sha512-67oh0FKaku9y48OpLzL3uK9ckrgLb83Sp5gxxTbtOGDw9lq6D8jw/Psj/9CipkbK406I2M7mvx1q+pv/MdbvxA==
+eslint-plugin-jest@26.8.3:
+  version "26.8.3"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-26.8.3.tgz#f5d9bb162636491c8f6f0cd2743fe67c86569338"
+  integrity sha512-2roWu1MkEiihQ/qEszPPoaoqVI1x2D8Jtadk5AmoXTdEeNVPMu01Dtz7jIuTOAmdW3L+tSkPZOtEtQroYJDt0A==
   dependencies:
     "@typescript-eslint/utils" "^5.10.0"
 
@@ -1750,10 +1755,10 @@ eslint-visitor-keys@^3.3.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-3.3.0.tgz#f6480fa6b1f30efe2d1968aa8ac745b862469826"
   integrity sha512-mQ+suqKJVyeuwGYHAdjMFqjCyfl8+Ldnxuyp3ldiMBFKkvytrXUZWaiPCEav8qDHKty44bD+qV1IP4T+w+xXRA==
 
-eslint@8.21.0:
-  version "8.21.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.21.0.tgz#1940a68d7e0573cef6f50037addee295ff9be9ef"
-  integrity sha512-/XJ1+Qurf1T9G2M5IHrsjp+xrGT73RZf23xA1z5wB1ZzzEAWSZKvRwhWxTFp1rvkvCfwcvAUNAP31bhKTTGfDA==
+eslint@8.22.0:
+  version "8.22.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.22.0.tgz#78fcb044196dfa7eef30a9d65944f6f980402c48"
+  integrity sha512-ci4t0sz6vSRKdmkOGmprBo6fmI4PrphDFMy5JEq/fNS0gQkJM3rLmrqcp8ipMcdobH3KtUP40KniAE9W19S4wA==
   dependencies:
     "@eslint/eslintrc" "^1.3.0"
     "@humanwhocodes/config-array" "^0.10.4"
@@ -2237,19 +2242,21 @@ ignore@^5.1.1, ignore@^5.1.8, ignore@^5.2.0:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.2.0.tgz#6d3bac8fa7fe0d45d9f9be7bac2fc279577e345a"
   integrity sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==
 
-ildella-test-commons@0.5.3:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/ildella-test-commons/-/ildella-test-commons-0.5.3.tgz#519c1963ae776e7948887416fbc6fe8a5c440239"
-  integrity sha512-Ynx39mGmJZfqSuz7R/oqtZ28nyWf5gCxuCqSLugNWkx9xg5JXlpTgRcAQ3O0jWQabtUQ22rSMyv4PKaI0gDOKQ==
+ildella-test-commons@0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/ildella-test-commons/-/ildella-test-commons-0.6.0.tgz#9f519fa342a641bb500d9bb49fc41c6f83d8b253"
+  integrity sha512-gVm5T1h4GIQmZx4eee6CAkISSEiLX0+RbNOeFp4N/d1Vsw5qKgh6/w/7ISIpUpIfCtgxlJ6GWdyhJHO9TVTD6A==
   dependencies:
-    aws-sdk "2.1191.0"
+    aws-sdk "2.1197.0"
     axios "0.27.2"
-    dayjs "1.11.4"
+    dayjs "1.11.5"
     depcheck "1.4.3"
-    eslint "8.21.0"
-    eslint-config-node-moar "0.7.2"
+    eslint "8.22.0"
+    eslint-config-node-moar "0.8.1"
+    eslint-config-node-moar-stricter "0.1.0"
+    eslint-config-node-moar-test "0.1.0"
     eslint-plugin-fp "2.3.0"
-    eslint-plugin-jest "26.8.2"
+    eslint-plugin-jest "26.8.3"
     eslint-plugin-node "11.1.0"
     eslint-plugin-promise "6.0.0"
     eslint-plugin-security "1.5.0"

@@ -30,6 +30,6 @@
   },
   "devDependencies": {
     "depcheck": "1.4.3",
-    "ildella-test-commons": "0.5.3"
+    "ildella-test-commons": "0.6.0"
   }
 }
