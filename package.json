@@ -1,9 +1,9 @@
 {
   "name": "ildella-nodejs-template",
   "description": "NodeJS project template with lint, testing and some commons utilities",
-  "version": "0.7.3",
+  "version": "0.8.0",
   "engines": {
-    "node": ">=12.10"
+    "node": ">=14.18"
   },
   "license": "MIT",
   "scripts": {
