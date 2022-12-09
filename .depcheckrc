@@ -1,2 +1,2 @@
-ignores: ["eslint", "newrelic"]
+ignores: ["eslint"]
 skip-missing: true

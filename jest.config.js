@@ -3,11 +3,10 @@
     https://jestjs.io/docs/configuration#projects-arraystring--projectconfig
 */
 
-const {jestCommons} = require('ildella-test-commons')
-const {jestPreset} = jestCommons
+const {jest: {preset}} = require('ildella-test-commons')
 
 module.exports = {
-  ...jestPreset,
+  ...preset(),
   projects: [
     '<rootDir>/tests/unit',
     '<rootDir>/tests/integration',
