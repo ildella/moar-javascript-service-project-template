@@ -1,13 +1,13 @@
-{
-  "name": "moar-javascript-backend-project-template",
-  "description": "NodeJS project template with lint, testing and some commons stuff",
-  "version": "1.0.0",
-  "engines": {
-    "node": ">=16.19"
-  },
-  "license": "MIT",
+# NPM scripts
+
+Convenient.
+
+```json
   "scripts": {
     "audit.production": "yarn audit --groups dependencies",
+    "ci.validate": "circleci config validate",
+    "ci.process": "circleci config process .circleci/config.yml > process.yml",
+    "ci.execute": "circleci local execute --job test",
     "cloc": "find src -name '*.js' | xargs wc -l",
     "cpd": "pmd cpd --minimum-tokens 16 --files src/,tests/ --language ecmascript --failOnViolation false > cpd.report",
     "depcheck": "depcheck",
@@ -16,14 +16,10 @@
     "docs:serve": "vitepress serve docs",
     "lint": "eslint . --max-warnings 0",
     "lint.print": "eslint --print-config src/config.js >> eslint-config.js",
-    "start": "node src",
-    "watch": "nodemon src",
+    "start.http": "node src/http",
     "test": "jest",
     "test.watch": "jest --watch",
-    "test.ci": "jest --ci"
+    "test.ci": "jest --ci",
+    "test.e2e": "k6 run tests/e2e/smoke.k6.js"
   },
-  "devDependencies": {
-    "depcheck": "1.4.3",
-    "ildella-test-commons": "0.9.16"
-  }
-}
+```
