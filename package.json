@@ -1,6 +1,6 @@
 {
-  "name": "moar-javascript-backend-project-template",
-  "description": "NodeJS project template with lint, testing and some commons stuff",
+  "name": "moar-javascript-service-project-template",
+  "description": "Template for a javascript backend service projet with lint, testing and a few commons stuff (that can be removed when not needed)",
   "version": "1.0.0",
   "engines": {
     "node": ">=16.19"
